@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM</title>
+</head>
+
+<body>
+  <button>hello</button>
+  <button class="js-button">Second Button</button>
+  <script>
+    /* Note : document.querySelector(): lets us get any element from the page and put it inside javascript */
+    console.log(document.querySelector('button'));
+    document.querySelector('button').innerHTML = 'Good Job';
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    // document.body.innerHTML = 'Hello';
+    // document.title = 'changed';
+
+
+    /*
+    console.log(document.title);
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    document.body.innerHTML = '<button>Fuck You</button>'
+
+    */
+
+    let number = String(32);
+    console.log(typeof number);
+    console.log('25'-5);
+    console.log('25'+5);
+    window.document 
+    // It is the same as just document 
+    window.console.log('window');
+    // it is the same as just console.log()
+    window.alert
+  </script>
+</body>
+
+</html>

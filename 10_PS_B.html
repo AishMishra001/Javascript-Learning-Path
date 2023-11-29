@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML , CSS AND JS problem set</title>
+  <style>
+    .js-on {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px
+    }
+
+    .js-off {
+      background-color: rgb(203, 200, 200);
+      color: black;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px
+    }
+
+    /* .js-change {
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px
+    } */
+    .toggle-button{
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px
+    }
+    .js-is-toggled {
+      background-color: rgb(203, 200, 200);
+      color: black;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>ON/OFF Button:</p>
+  <button class="js-on" onclick="
+    changeText();
+    ">ON</button>
+
+  <p>
+  <div>
+    <button class="toggle-button js-change1" onclick="
+      changeIt('.js-change1');
+        ">Gaming</button>
+    <button class="toggle-button js-change2" onclick="
+      changeIt('.js-change2');
+       
+      ">Music</button>
+    <button class="toggle-button js-change3" onclick="
+       changeIt('.js-change3');
+      ">Tech</button>
+  </div>
+  </p>
+
+
+  <script>
+    function changeText() {
+      const button = document.querySelector('.js-on');
+      if (button.innerText === 'ON') {
+        button.innerText = 'OFF';
+        button.classList.add('js-off');
+      }
+      else if (button.innerText === 'OFF') {
+        button.innerText = 'ON';
+        button.classList.remove('js-off');
+      }
+    }
+
+    function changeIt(classname){
+      const button = document.querySelector(classname);
+      if (!button.classList.contains('js-is-toggled')) {
+        turnOffPreviousButton();
+        button.classList.add('js-is-toggled');
+      }
+      else {
+        button.classList.remove('js-is-toggled');
+      }
+    }
+
+    function turnOffPreviousButton(){
+      const previousButton = document.querySelector('.js-is-toggled')
+      if(previousButton){
+        previousButton.classList.remove('js-is-toggled')
+      }
+    }
+
+  </script>
+</body>
+
+</html>

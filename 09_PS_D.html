@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>problem set dom</title>
+</head>
+<body>
+  <input type="text" class="js-input" onkeyup="
+    printName();
+    ">
+   <div class="js-print"></div> 
+
+   <script>
+    function printName() {
+
+      let name = document.querySelector('.js-input').value ; 
+      document.querySelector('.js-print').innerHTML=`${name}`
+    }
+
+   </script>
+</body>
+</html>

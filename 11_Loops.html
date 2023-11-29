@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+</head>
+<body>
+  <script>
+    let number = 1 ;
+    while(number<=5){
+        console.log(number);
+        number++;
+    }
+
+    for(let i = 1 ; i<=5 ; i++){
+        console.log(i);
+    }
+
+    let x = 0
+    while(x<0.5){
+      x=Math.random();
+    }
+
+
+    // Looping thought an array : 
+
+    let array = ['You','are','a','little','bitch'];
+
+    for(let i= 0 ; i<array.length ; i++){
+      console.log(array[i]);
+    }
+
+    console.log(x);
+
+    //Accumulator Pattern 
+
+    const nums = [1,2,4,6];
+    let sum = 0 ; 
+    for(let i= 0 ; i<nums.length ; i++){
+      sum = sum + nums[i];
+    }  
+    console.log(sum);
+
+    const doubleNums=[];
+    for(let i=0 ; i<nums.length ;i++){
+      let num = nums[i];
+      doubleNums.push(2*num);
+    }
+    console.log(doubleNums);
+    </script>
+</body>
+</html>

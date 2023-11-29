@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <script>
+        let calculator = localStorage.getItem('calculator') || '';
+
+        function updateCalculator(n) {
+            calculator += n;
+            document.querySelector('.js-display').innerHTML = calculator;
+            localStorage.setItem('calculator', calculator);
+        }
+    </script>
+    <p>Calculator</p>
+    <p class="js-display"></p>
+    <p>
+        <button onclick="
+        updateCalculator(1);
+            ">1</button>
+        <button onclick="
+         updateCalculator(2);
+        ">2</button>
+        <button onclick="
+          updateCalculator(3);
+        ">3</button>
+        <button onclick="
+         updateCalculator('+');
+        ">+</button>
+
+    </p>
+
+    <p>
+        <button onclick="
+           updateCalculator(4);
+           ">4</button>
+        <button onclick="
+           updateCalculator(5);
+           ">5</button>
+        <button onclick="
+           updateCalculator(6);
+           ">6</button>
+        <button onclick="
+            updateCalculator('-'); 
+            ">-</button>
+    </p>
+
+    <p>
+        <button onclick="
+          updateCalculator(7);
+          ">7</button>
+        <button onclick="
+           updateCalculator(8);
+           ">8</button>
+        <button onclick="
+           updateCalculator(9);
+           ">9</button>
+        <button onclick="
+            updateCalculator('*');
+            ">*</button>
+    </p>
+
+    <p>
+        <button onclick="
+                updateCalculator(0);
+                ">0</button>
+        <button onclick="
+            calculator = calculator + '';
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">.</button>
+        <button onclick="
+            calculator = eval(calculator);
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">=</button>
+        <button onclick="
+            calculator = calculator + ' / '; 
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">/</button>
+    </p>
+    <p>
+        <button onclick="
+                calculator = 0 ;
+                document.querySelector('.js-display').innerHTML = calculator;  
+                ">clear</button>
+
+
+    </p>
+</body>
+
+</html>

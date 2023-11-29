@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+     const Products = {
+      name : 'socks',
+      price : 1921 ,
+      'Delivery-time' : '1 day' ,
+      rating :{
+        stars : 4.5 ,
+        count : 88,
+      },
+      fun: function function1(){
+        console.log('Functions inside object');
+      }
+     };
+     console.log(Products);
+     Products.name = 'cotton socks';
+     console.log(Products);
+     Products.NewProduct = true ; 
+     console.log(Products);
+     delete Products.NewProduct;
+     console.log(Products);
+     console.log(Products['name']);
+     console.log(Products['price']);
+     console.log(Products['Delivery-time'])
+     console.log(Products.rating.stars);
+     console.log(Products.rating);
+
+     Products.fun();  // This function inside object is called Method
+    //  JSON ----> Javascript object 
+     console.log(JSON.stringify(Products));
+    // Javascript object ----> JSON : JSON.stringify()
+     const jsonString = JSON.stringify(Products);
+     // JSON ----> Javascript object : JSON.parse()
+     console.log(JSON.parse(jsonString));
+
+     localStorage.setItem('name' , 'Aish'); 
+     // localStorage.setItem() saves an item in the local storage 
+     console.log(localStorage.getItem('name')); 
+     // localStorage.getItem() get that item from the local storage 
+
+
+
+     // AUTO BOXING :  
+    //  Here the string is wraped up in a special object that's why it 
+    //  has property and method  
+
+     console.log('hello'.length);    // Property
+     console.log('hello'.toUpperCase());  // Method 
+    </script>
+</body>
+
+</html>

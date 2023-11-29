@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM-Project:YT Subscribe button</title>
+  <style>
+    .subscribe-button{
+      border: none;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+    .subscribed-button{
+      background-color: rgb(201, 195, 195);
+      color: black;
+    }
+
+    body{
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button class="js-subscribe-button subscribe-button" onclick="
+   subscribe();
+  ">Subscribe</button>
+
+  <script>
+
+    function subscribe() {
+      const subscribeButton = document.querySelector('.js-subscribe-button');
+      if (subscribeButton.innerText === 'Subscribe') {
+        subscribeButton.innerHTML = 'Unsubscribe';
+        subscribeButton.classList.add('subscribed-button')
+        // .classList : give us control of the class attributes 
+        // .add() : adds a class to an element 
+        
+      }
+      else {
+        document.querySelector('.js-subscribe-button').innerHTML = 'Subscribe';
+        subscribeButton.classList.remove('subscribed-button');
+
+      }
+      
+    }
+
+  </script>
+</body>
+
+</html>

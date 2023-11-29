@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  
+  <title>Objects problem set 8a-8e</title>
+</head>
+<body>
+  <script>
+    amazonProduct={
+       
+      Basketball:{
+        name : 'Basketball',
+        price : 2313 ,
+      }
+    }
+    console.log(amazonProduct.Basketball)
+    amazonProduct.Basketball.price += 500;
+    console.log(amazonProduct.Basketball)
+    console.log(amazonProduct.Basketball.price)
+    amazonProduct.Basketball['delivery-time']='3days'
+    console.log(amazonProduct.Basketball)
+
+    
+     const Product1={
+        name : 'Bat',
+        price: 125 ,
+      }
+     const Product2={
+       name : 'Ball',
+       price : 25 ,
+      }
+     
+     const Product3={
+       name : 'Ball',
+       price : 25 ,
+      }
+    
+
+    function camparePrice(Product1,Product2){
+      if(Product1.price>Product2.price){
+        return Product2 ;
+      }
+      else{
+        return Product1;
+      }
+    }
+
+    console.log(camparePrice(Product1,Product2));
+
+
+    function isSameProduct(Product1,Product2){
+      if(Product1.name === Product2.name  && Product1.price===Product2.price){
+        return true ; 
+      }
+      else{
+        return false ; 
+      }
+    }
+
+    console.log(isSameProduct(Product1,Product2));
+    console.log(isSameProduct(Product3,Product2));
+  </script>
+</body>
+</html>

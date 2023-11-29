@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML,CSS AND JS problem set</title>
+<style>
+.addtocart{
+  background-color: rgb(231, 231, 57);
+  color: black;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 20px;
+  
+
+}
+.request{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.schedule{
+  background-color:rgb(195, 193, 193);
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+
+}
+</style>
+</head>
+<body>
+  <p>Add to Cart button : </p>
+  <button class="addtocart">Add to Cart</button>
+  <br>
+  <p>Request and Schedule button:</p>
+  <p>
+  <div>
+    <button class="request js-button">Request now</button>
+    <button class="schedule">Schedule for later</button>
+  </div>
+</p>
+
+<script>
+  const button = document.querySelector('.js-button');
+  console.log(button.classList.contains('js-button'));
+</script>
+</body>
+</html>

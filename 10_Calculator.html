@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+     <link rel="stylesheet" href="CSS/10_Calculator.css">
+</head>
+
+<body>
+    <script>
+        let calculator = localStorage.getItem('calculator') || '';
+
+        function updateCalculator(n) {
+            calculator += n;
+            document.querySelector('.js-display').innerHTML = calculator;
+            localStorage.setItem('calculator', calculator);
+        }
+    </script>
+    <div class="buttons-grid">
+    <p class="calculator-text">Calculator</p>
+    <p class="js-display calculator"></p>
+    
+    <p>
+        <button class="grey-button calculator-button" onclick="
+        updateCalculator(1);
+            ">1</button>
+        <button class="grey-button calculator-button" onclick="
+         updateCalculator(2);
+        ">2</button>
+        <button class="grey-button calculator-button" onclick="
+          updateCalculator(3);
+        ">3</button>
+        <button class="orange-button calculator-button" onclick="
+         updateCalculator('+');
+        ">+</button>
+
+    </p>
+
+    <p>
+        <button class="grey-button calculator-button" onclick="
+           updateCalculator(4);
+           ">4</button>
+        <button class="grey-button calculator-button" onclick="
+           updateCalculator(5);
+           ">5</button>
+        <button class="grey-button calculator-button" onclick="
+           updateCalculator(6);
+           ">6</button>
+        <button class="orange-button calculator-button" onclick="
+            updateCalculator('-'); 
+            ">-</button>
+    </p>
+
+    <p>
+        <button class="grey-button calculator-button" onclick="
+          updateCalculator(7);
+          ">7</button>
+        <button class="grey-button calculator-button" onclick="
+           updateCalculator(8);
+           ">8</button>
+        <button class="grey-button calculator-button" onclick="
+           updateCalculator(9);
+           ">9</button>
+        <button class="orange-button calculator-button" onclick="
+            updateCalculator('*');
+            ">*</button>
+    </p>
+
+    <p>
+        <button class="grey-button calculator-button" onclick="
+                updateCalculator(0);
+                ">0</button>
+        <button class="grey-button calculator-button" onclick="
+            calculator = calculator + '';
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">.</button>
+        <button class="grey-button calculator-button" onclick="
+            calculator = eval(calculator);
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">=</button>
+        <button class="orange-button calculator-button" onclick="
+            calculator = calculator + ' / '; 
+            document.querySelector('.js-display').innerHTML = calculator; 
+            localStorage.setItem('calculator',calculator);
+            ">/</button>
+    </p>
+    <p>
+        <button class="calculator-button grey-button clear" onclick="
+                calculator = 0 ;
+                document.querySelector('.js-display').innerHTML = calculator;  
+                ">clear</button>
+
+
+    </p>
+</div>
+</body>
+
+</html>

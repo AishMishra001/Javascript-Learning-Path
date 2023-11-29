@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+     // OBJECTS ARE REFERENCES 
+
+     object1 ={
+      message: 'hello' , 
+     }
+     const object2 = object1 ;
+     object1.message = 'Good Job'
+     console.log(object1);
+     console.log(object2);
+
+     const object3 = {
+       message : 'good job ',
+     };
+
+     console.log(object1 === object2) // here bcus the reference is same hence both are equal .
+
+     console.log(object1 === object3)  // here bcus the reference is different that's why they are not equal .
+
+     const object4 = {
+       message : 'good job ',
+       price : 899,
+     };
+    //  const message = object4.message;
+    //  const price = object4.price;
+    //  shortcut for this ==> 
+     const {message,price}= object4 ;
+    //  NOTE: this is called DESTRUCTING : easier way to take property out of an object  
+    console.log(message);
+    console.log(price);
+
+
+    object5={
+      // message : message ,
+      message, // shorthand property
+      // method : function function1(){
+      //   console.log('method')
+      // },
+      method(){
+        console.log('method')
+      }
+    }
+    
+    console.log(message);
+    object5.method();
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Problem 8i-8k</title>
+    </head>
+    <body>
+       <button onclick="
+        playGame('heads');
+        ">heads</button>
+       <button onclick="
+       playGame('tails');
+       ">tails</button>
+
+
+
+
+        <script>
+       let Score =JSON.parse(localStorage.getItem('Score')) || {
+        wins : 0 ,
+        losses : 0
+       };     
+       let guess = '';
+       function playGame(guess){
+       let Random = Math.random();
+       let result = '';
+       (Random<0.5 && Random>0)?result='heads':result='tails'; 
+
+        
+
+        if(guess===result){
+            console.log('You Won!');
+            Score.wins++ ; 
+        }
+        else{
+            console.log('You Lost!');
+            Score.losses++;
+        }
+        console.log(Score);
+        localStorage.setItem('Score',JSON.stringify(Score));
+        
+       }
+
+        </script>
+    </body>
+</html>

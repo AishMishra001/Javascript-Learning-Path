@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem set of DOM</title>
+</head>
+
+<body>
+  <button>9a</button>
+  <button class="button9b">9b</button>
+
+  <br>
+  <br>
+  <br>
+  <button onclick="
+   document.querySelector('.js-paragraph').innerHTML = 'You chose : Heads';
+   ">heads</button>
+  <button onclick="
+  document.querySelector('.js-paragraph').innerHTML = 'You chose : tails';
+  choice = 'tails'
+  ">tails</button>
+  <p class="js-paragraph"></p>
+
+
+
+
+  <script>
+    let button = document.querySelector('button')
+    console.log(button);
+    document.querySelector('.button9b').innerText = '9b done!';
+
+   
+  </script>
+</body>
+
+</html>

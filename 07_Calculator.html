@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <p>Calculator</p>
+    <p>
+        <button onclick="
+            updateCalculator(1);
+            ">1</button>
+        <button onclick="
+         updateCalculator(2);
+        ">2</button>
+        <button onclick="
+          updateCalculator(3);
+        ">3</button>
+        <button onclick="
+         updateCalculator('+');
+        ">+</button>
+
+        <script>
+            let calculator = '';
+
+            function updateCalculator(n) {
+                calculator += n;
+                console.log(calculator);
+            }
+        </script>
+    </p>
+
+    <p>
+        <button onclick="
+           updateCalculator(4);
+                ">4</button>
+        <button onclick="
+           updateCalculator(5);
+            ">5</button>
+        <button onclick="
+           updateCalculator(6);
+            ">6</button>
+        <button onclick="
+            updateCalculator('-'); 
+            ">-</button>
+    </p>
+
+    <p>
+        <button onclick="
+          updateCalculator(7);
+                ">7</button>
+        <button onclick="
+           updateCalculator(8);
+            ">8</button>
+        <button onclick="
+           updateCalculator(9);
+            ">9</button>
+        <button onclick="
+            updateCalculator('*');
+            ">*</button>
+    </p>
+
+    <p>
+        <button onclick="
+                updateCalculator(0);
+                ">0</button>
+        <button onclick="
+            calculator = calculator + '.';
+            console.log(calculator);
+            ">.</button>
+        <button onclick="
+            calculator = eval(calculator);
+            console.log(calculator);
+            ">=</button>
+        <button onclick="
+            calculator = calculator + ' / '; 
+            console.log(calculator); 
+            ">/</button>
+    </p>
+    <p>
+        <button onclick="
+                calculator = 0 ;
+                console.log('Cleared'); 
+                ">clear</button>
+
+
+    </p>
+</body>
+
+</html>

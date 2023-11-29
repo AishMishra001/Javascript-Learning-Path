@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+    let arr1 = [1,2,3]
+    console.log(arr1);
+    let array = [10,20,30,'string',[1,2],true ,{
+      name : 'Aish Mishra'
+    }];
+    console.log(array);
+    array[0]=59;
+    console.log(array);
+    console.log(typeof [1,2]);
+    // Note : Array is a type of object that's why typeof [1,2] gives the output object 
+    console.log(Array.isArray([1,2]));
+    //.isArray() is a function which let's whether the given element is array or not 
+    
+    console.log(array.length)
+
+    array.push(100);
+    console.log(array);
+
+   /* array.splice((Index we want to remove),(Number of values we want to remove))   */
+
+   array.splice(0,1);
+   console.log(array);
+   array.splice(3,2);
+   console.log(array);
+
+
+  </script>
+</body>
+</html>
