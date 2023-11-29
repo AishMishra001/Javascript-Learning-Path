@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance functions 2</title>
+
+</head>
+<body>
+  <script>
+    // setTimeout((function we want to run in future),(how long to wait before running))
+    // 3000 means 3 sec 
+    
+  // Asyncronous code : Asse code jo uper ke function ka timer on karke neech ka code print karde orr code n block kre ki jab timer khatam hoga tb neech ka print krege 
+
+    setTimeout(function(){
+      console.log('timeout');
+    },3000) 
+
+    console.log('Hello')
+
+    //setInterval(function to run in future , time) It is almost same a setTimeout but it keeps on running . 
+    
+    setInterval(function(){
+      console.log('Interval')
+    },3000);
+
+    console.log('Hello1')
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Function 3</title>
+</head>
+<body>
+  <script>
+//ANOTHER METHOD TO LOOP THROUGH AN ARRAY : 
+//.forEach(function) : syntax ; it runs the function for each item of the array 
+// Prefered method for looping through an array 
+
+    [
+      'watch youtube',
+      'meditate',
+      'Exercise'
+    ].forEach(function(value,index){
+      if(value === 'meditate'){
+        return ; 
+      }
+        console.log(index);
+        console.log(value);
+    })
+  </script>
+</body>
+</html>

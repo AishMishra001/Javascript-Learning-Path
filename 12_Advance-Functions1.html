@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Functions 1</title>
+</head>
+<body>
+  <script>
+  //  FUNCTIONS ARE VALUES 
+
+  // Hoisting : This means that you can use variables and functions before they are declared in your code. 
+
+  // This method allows Hoisting  
+ const function1 = function greeting(){
+    console.log("what's up bitch?");
+  }
+   // Anonymous Funtion : (funtions without a name)
+   // This method doesn't allow Hoisting 
+ const function2 = function(){
+    console.log("what's up bitch?");
+  }
+
+  console.log(function1);
+  console.log(typeof function1);
+  console.log(function2);
+
+
+ const object1={
+  name : "Aish",
+  fun: function() {
+    console.log('hello');
+  }
+} 
+object1.fun();
+
+// Passing a function into another function : 
+
+
+function function5(parameter){
+   parameter(); 
+}
+
+function5(function() {
+ console.log('Yo bitch , this is function pass into another function');
+});
+  </script>
+</body>
+</html>
