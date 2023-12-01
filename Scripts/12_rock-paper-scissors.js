@@ -19,7 +19,7 @@ let intervalId ;
 function autoPlay(){
   
   if(!isAutoPlaying){
-   intervalId =  setInterval(function(){
+   intervalId =  setInterval(()=>{
       const playerMove = pickComputerMove();
       playGame(playerMove);
     },1000);
@@ -29,9 +29,17 @@ function autoPlay(){
      clearInterval(intervalId);
      isAutoPlaying = false ; 
   }
-
-  
 }
+  document.querySelector('.js-rock-button').addEventListener('click',()=>{
+    playGame('rock');
+  })
+  document.querySelector('.js-paper-button').addEventListener('click',()=>{
+    playGame('paper');
+  })
+  document.querySelector('.js-scissor-button').addEventListener('click',()=>{
+    playGame('scissor');
+  })
+
 
 
 function playGame(playerMove) {
@@ -79,7 +87,7 @@ function playGame(playerMove) {
 
   updateScoreElement();
   document.querySelector('.js-result').innerHTML = result;
-  document.querySelector('.js-moves').innerHTML = `You <img src="Images/${playerMove}-emoji.png" class="moves-icon"> <img src="Images/${computerMove}-emoji.png"  class="moves-icon"> Computer `;
+  document.querySelector('.js-moves').innerHTML = `You <img src="../Images/${playerMove}-emoji.png" class="moves-icon"> <img src="../Images/${computerMove}-emoji.png"  class="moves-icon"> Computer `;
 
 
 }

@@ -11,7 +11,7 @@ renderTodolist();
 function renderTodolist(){
 
   let todolistHtml='';
-  Todolist.forEach(function(todoObject,index){
+  Todolist.forEach((todoObject,index)=>{
    
     const{name,dueDate} = todoObject ;
 

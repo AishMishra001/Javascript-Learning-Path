@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Functions</title>
+</head>
+<body>
+  <button class="js-click">click</button>
+  <script>
+    
+  //   const regularFunction = function(parameter,parameter){
+  //     console.log('hi')
+  //   }
+    
+    
+    
+    
+    
+    
+  //   Arrow Functions : Easier way to write function 
+  //   const arrowFunction = (parameter,parameter1) =>{
+  //     console.log('hello');
+  //   }
+  //   arrowFunction();
+
+  //  If there is only one parameter then we can remove the () for the parameter 
+
+  //   const onePara = Para =>{
+  //     console.log('ok');
+  //   }
+
+  //   onePara();
+
+
+  //   Oneline array function 
+
+  //   const oneLine = () => 2+3 ; 
+  //   console.log(oneLine());
+
+  //   arrow function inside an object 
+
+  //   const object2 = {
+  //     method : () => {
+         
+  //     }, 
+  //     method(){
+  //                            shorthand property        
+  //     }
+  //   }
+ const buttonElement = document.querySelector('.js-click') 
+
+ /* Syntax of .addEventListener:  element.addEventListener(event, listener, options);
+   event : element is the target element that you want to listen for events on.
+   listener : event is a string that represents the type of event to listen for, such as "click", "mouseover", "keydown", etc.  
+   options : listener is a function or an object that implements the EventListener interface, which will be invoked when the event happens.
+ */
+
+ const eventListener = () => { 
+  console.log('click');
+ }
+ const eventListener1 = () => { 
+  console.log('click1');
+ }
+ buttonElement.addEventListener('click', eventListener);
+ buttonElement.addEventListener('click', eventListener1);
+ 
+ buttonElement.removeEventListener('click',eventListener)
+  </script>
+</body>
+</html>
